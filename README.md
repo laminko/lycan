@@ -30,7 +30,31 @@ $ pip install -r requirements.txt
 
 ## Usage
 
-First, create a `yaml` file inside `rules` directory. Then, run following command:
+First, create a `yaml` file inside `rules` directory.
+
+Rule format is as follows:
+
+```yaml
+name: TestThisHost
+proto: http
+host: localhost
+port: 8000
+tasks:
+  - endpoint: /api/v1/users/
+    method: POST
+    headers:
+      Content-Type: application/json
+    data:
+      name: kyawkyaw
+      address: Yangon
+  - endpoint: /api/v1/users/1
+    method: GET
+    headers:
+      Content-Type: application/json
+
+```
+
+Then, run following command:
 
 ```bash
 $ locust -f loadtester.py
