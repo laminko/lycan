@@ -4,7 +4,7 @@ A simple load testing script using [locust](https://locust.io/) and [pyyaml](htt
 
 ## Installation
 
-First, an python environment is required. To resolve this, I would like to recommend **miniconda**.
+First, a python environment or python 3.6+  is required. To resolve this, I would like to recommend **miniconda**.
 To install **miniconda**, please refer to https://docs.conda.io/en/latest/miniconda.html.
 
 ### Requirements
