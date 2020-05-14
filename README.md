@@ -1,4 +1,4 @@
-# lycan: loadtester script
+# [lycan](https://en.wikipedia.org/wiki/Lycan): loadtester script
 
 A simple load testing script using [locust](https://locust.io/) and [pyyaml](https://pyyaml.org/). The story behind this is Ko [Setkyar](https://github.com/setkyar) wants to test some APIs and not-so-complex and light weight solution. I found locust but tasks are defined in python. To overcome this, I create this python wrapper which generates `HttpLocust` and `TaskSet` classes from `yaml` file at runtime.
 
@@ -42,8 +42,10 @@ port: 8000
 tasks:
   - endpoint: /api/v1/users/
     method: POST
+    # To define Headers
     headers:
       Content-Type: application/json
+      ...
     data:
       name: kyawkyaw
       address: Yangon
@@ -51,7 +53,7 @@ tasks:
     method: GET
     headers:
       Content-Type: application/json
-
+  - ...
 ```
 
 Then, run following command:
