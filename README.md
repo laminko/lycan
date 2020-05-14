@@ -1,6 +1,6 @@
 # lycan: loadtester script
 
-A simple load testing script using [locust](https://locust.io/) and [pyyaml](https://pyyaml.org/). The story behind this is Ko [Setkyar](https://github.com/setkyar) wants to test some APIs and not-so-complex and light weight solution. I found locust but tasks are defined in python. To overcome this, I create this python wrapper which generate `HttpLocust` and `TaskSet` classes from `yaml` file at runtime.
+A simple load testing script using [locust](https://locust.io/) and [pyyaml](https://pyyaml.org/). The story behind this is Ko [Setkyar](https://github.com/setkyar) wants to test some APIs and not-so-complex and light weight solution. I found locust but tasks are defined in python. To overcome this, I create this python wrapper which generates `HttpLocust` and `TaskSet` classes from `yaml` file at runtime.
 
 ## Installation
 
@@ -17,9 +17,14 @@ Install required python libraries.
 
 ```bash
 cd /path/to/lycan
-# NOTE: please activate environment first, if not.
+# NOTE:
+# To create python 3.6 environment,
+# $ conda create -n <env-name> python=3.6
+#
+# To activate environment, if not yet.
 # $ conda activate <env-name>
 
+# Then, install required dependencies
 $ pip install -r requirements.txt
 ```
 
