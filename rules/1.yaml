@@ -1,0 +1,16 @@
+name: TestThisHost
+proto: http
+host: localhost
+port: 8000
+tasks:
+  - endpoint: /api/v1/users/
+    method: POST
+    headers:
+      Content-Type: application/json
+    data:
+      name: kyawkyaw
+      address: Yangon
+  - endpoint: /api/v1/users/1
+    method: GET
+    headers:
+      Content-Type: application/json
